@@ -1,0 +1,25 @@
+paths:
+  /calls/{call_id}/callerid:
+    patch:
+      summary: Update the display name of an ongoing call
+      parameters:
+        - $ref: '#/parameters/ApplicationCallID'
+        - $ref: '#/parameters/CallerIdUpdate'
+      responses:
+        '204':
+          description: Update sent successfully
+definitions:
+  CallerIdUpdate:
+    type: object
+    properties:
+      caller_id:
+        description: New value to set as the caller ID
+        type: string
+parameters:
+  CallerIdUpdate:
+    name: body
+    in: body
+    description: Parameters to update caller ID
+    required: true
+    schema:
+      $ref: '#/definitions/CallerIdUpdate'
