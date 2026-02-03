@@ -3,13 +3,13 @@ class UpdateCallerIDService:
         self._ari = ari
 
     def update_caller_id(self, call_id, request_data):
-        # We target the CONNECTEDLINE function with the 'i' flag
-        # to trigger an immediate SIP update frame
-
+        """ Use CALLERID to update the caller id shown to the callee
+        https://www.voip-info.org/asterisk-func-callerid/
+        """
         try:
             self._ari.channels.setChannelVar(
                 channelId=call_id,
-                variable='CONNECTEDLINE(name,i)',
+                variable='CALLERID(all)',
                 value=request_data["caller_id"]
             )
             return {}, 204
