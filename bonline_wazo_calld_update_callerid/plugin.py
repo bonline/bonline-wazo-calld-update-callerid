@@ -2,7 +2,7 @@ from .resources import UpdateCallerIDResource
 from .services import UpdateCallerIDService
 
 
-class UpdateCallerIDPlugin:
+class Plugin:
 
     def load(self, dependencies):
         api = dependencies['api']
