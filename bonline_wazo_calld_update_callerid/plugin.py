@@ -10,4 +10,4 @@ class UpdateCallerIDPlugin:
 
         service = UpdateCallerIDService(ari.client)
 
-        api.add_resource(UpdateCallerIDResource, '/calls/<call_id>/callerid', resource_class_args=[service])
+        api.add_resource(UpdateCallerIDResource, '/applications/<application_uuid>/calls/<call_id>/callerid', resource_class_args=[service])

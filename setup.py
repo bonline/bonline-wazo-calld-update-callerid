@@ -23,7 +23,7 @@ setup(
     },
     entry_points={
         'wazo_calld.plugins': [
-            'callerid = bonline_wazo_calld_update_callerid.plugin:Plugin'
+            'callerid = bonline_wazo_calld_update_callerid.plugin:UpdateCallerIDPlugin'
         ]
     }
 )
