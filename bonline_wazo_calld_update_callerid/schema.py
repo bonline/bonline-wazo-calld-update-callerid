@@ -7,7 +7,7 @@ from marshmallow.validate import Length
 
 
 class UpdateCallerIDSchema(Schema):
-    caller_id = fields.Str(validate=Length(min=1))
+    caller_id = fields.Str(validate=Length(min=1), required=True)
     mode = fields.Str(
         validate=validate.OneOf(["prepend", "overwrite", "append"]),
         load_default="prepend"
