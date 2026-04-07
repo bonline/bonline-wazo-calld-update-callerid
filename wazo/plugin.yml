@@ -1,0 +1,10 @@
+name: bonline-wazo-calld-update-callerid
+namespace: bonline
+version: 0.0.3
+author: bOnline
+display_name: Update the caller ID of an ongoing call
+min_wazo_version: 25.12
+tags:
+  - experimental
+  - application
+homepage: https://bonline.com

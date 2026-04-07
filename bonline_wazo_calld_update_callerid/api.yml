@@ -1,0 +1,34 @@
+paths:
+  /applications/{application_uuid}/calls/{call_id}/callerid:
+    patch:
+      summary: Update the display name of an ongoing call
+      parameters:
+        - $ref: '#/parameters/ApplicationCallID'
+        - $ref: '#/parameters/CallerIdUpdate'
+      responses:
+        '204':
+          description: Update sent successfully
+definitions:
+  CallerIdUpdate:
+    type: object
+    properties:
+      caller_id:
+        description: New value to set as the caller ID
+        type: string
+      mode:
+        description: >
+          How to apply the new caller ID to the existing value. Valid values are:
+          "prepend", "overwrite", "append".
+        type: string
+        enum:
+          - prepend
+          - overwrite
+          - append
+parameters:
+  CallerIdUpdate:
+    name: body
+    in: body
+    description: Parameters to update caller ID
+    required: true
+    schema:
+      $ref: '#/definitions/CallerIdUpdate'
