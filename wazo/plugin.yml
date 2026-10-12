@@ -1,6 +1,6 @@
 name: bonline-wazo-calld-update-callerid
 namespace: bonline
-version: 0.0.3
+version: 0.0.4
 author: bOnline
 display_name: Update the caller ID of an ongoing call
 min_wazo_version: 25.12
