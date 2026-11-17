@@ -1,0 +1,5 @@
+wazo-calld:
+  system_user: www-data
+  acl:
+    - 'amid.action.Getvar.create'
+    - 'amid.action.Setvar.create'
